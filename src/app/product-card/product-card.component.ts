@@ -1,3 +1,5 @@
+import { Product } from './../models/product';
+import { ShoppingkartService } from './../shoppingkart.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,11 +9,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
 
-  @Input("eachProduct") eachProduct : {};
+  @Input("eachProduct") eachProduct : Product;
 
-  constructor() { }
+  totalItems : number; 
 
+  constructor(private shoppingkartService: ShoppingkartService) { 
+  }
   ngOnInit() {
   }
-
+  delete(){
+    this.shoppingkartService.deleteFromShoppingKart();
+  }
+  add(){
+    this.shoppingkartService.addToShoppingKart();
+  }
 }

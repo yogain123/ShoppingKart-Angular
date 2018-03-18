@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  products : any[];
+  products : Product[];
 
   category : string;
   filteredArray : any[];

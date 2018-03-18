@@ -1,3 +1,4 @@
+import { ShoppingkartService } from './../shoppingkart.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BsNavbarComponent implements OnInit {
 
-  constructor() { }
+  totalItems : number = 0;
 
-  ngOnInit() {
+  constructor(private shoppingkartService :ShoppingkartService) { 
+
+  }
+
+ ngOnInit() {
+    this.shoppingkartService.getTotalItems().subscribe(item=>this.totalItems=item);
   }
 
 }

@@ -5,6 +5,15 @@
       <p class="card-text">{{eachProduct.price | currency:'USD':true }}</p>
     </div>
     <div class="card-footer">
-        <a href="#" class="btn btn-primary btn-block">Add to Card</a>
+            <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary btn-block" (click)="delete()">-</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-block" disabled>
+                        Add to Card
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" (click)="add()">+</button>
+            </div>
     </div>
 </div>
+

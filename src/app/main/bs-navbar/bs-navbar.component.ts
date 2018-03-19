@@ -1,5 +1,5 @@
-import { ShoppingkartService } from './../shoppingkart.service';
 import { Component, OnInit } from '@angular/core';
+import { ShoppingkartService } from '../../shared/shoppingkart.service';
 
 @Component({
   selector: 'app-bs-navbar',

@@ -1,8 +1,8 @@
-import { ProductService } from './../../product.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CustomValidators } from 'ng2-validation';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ProductService } from '../../../shared/product.service';
 
 @Component({
   selector: 'app-product-form',

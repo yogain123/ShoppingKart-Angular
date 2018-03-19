@@ -15,12 +15,12 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-import { ProductService } from './product.service';
 import {CustomFormsModule} from 'ng2-validation';
 import {DataTableModule} from 'angular-4-data-table';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-import { ShoppingkartService } from './shoppingkart.service';
+import { ProductService } from '../shared/product.service';
+import { ShoppingkartService } from '../shared/shoppingkart.service';
 
 @NgModule({
   declarations: [

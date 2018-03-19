@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../product.service';
 import { Product } from '../../models/product';
 import { DataTableResource } from 'angular-4-data-table';
+import { ProductService } from '../../../shared/product.service';
 
 @Component({
   selector: 'app-admin-products',

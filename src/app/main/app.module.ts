@@ -21,6 +21,8 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
 import { ProductsComponent } from './products/products.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductService } from '../sharedd/product.service';
+import { Hola1Component } from './products/hola1/hola1.component';
+import { Hola2Component } from './products/hola2/hola2.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { ProductService } from '../sharedd/product.service';
     ProductFormComponent,
     ProductFilterComponent,
     ProductCardComponent,
+    Hola1Component,
+    Hola2Component,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,10 @@ import { ProductService } from '../sharedd/product.service';
     DataTableModule,
     RouterModule.forRoot([
       {path : "", component: ProductsComponent},
-      {path: "products", component: ProductsComponent},
+      {path: "products", component: ProductsComponent, children:[
+        {path : "hola1",component:Hola1Component},
+        {path : "hola2",component:Hola2Component}
+      ]},
       {path: "shopping-cart", component: ShoppingCartComponent},
       {path: "check-out", component: CheckOutComponent},
       {path: "order-success", component: OrderSuccessComponent},

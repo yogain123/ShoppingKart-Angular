@@ -30,5 +30,7 @@ export class ProductsComponent implements OnInit {
         this.products = this.productService.getAllData();
     });
   }
-
+ngOnDestroy(){
+  console.log("product component destroy");
+}
 }

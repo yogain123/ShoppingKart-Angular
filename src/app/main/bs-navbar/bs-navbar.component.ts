@@ -18,4 +18,9 @@ export class BsNavbarComponent implements OnInit {
     this.shoppingkartService.getTotalItems().subscribe(item=>this.totalItems=item);
   }
 
+  ngOnDestroy(){
+    console.log("ns-navbar component destroy");
+    this.shoppingkartService.getTotalItems().unsubscribe();
+  }
+
 }

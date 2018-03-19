@@ -1,26 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { ShareddModule } from './../sharedd/sharedd.module';
 import { NgModule } from '@angular/core';
-import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { DataTableModule } from 'angular-4-data-table';
+import { CustomFormsModule } from 'ng2-validation';
+import { ShoppingkartService } from '../sharedd/shoppingkart.service';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { CheckOutComponent } from './check-out/check-out.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductsComponent } from './products/products.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { CheckOutComponent } from './check-out/check-out.component';
-import { OrderSuccessComponent } from './order-success/order-success.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
-import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
-import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
-import { RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { ProductFormComponent } from './admin/product-form/product-form.component';
-import {CustomFormsModule} from 'ng2-validation';
-import {DataTableModule} from 'angular-4-data-table';
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ProductService } from '../shared/product.service';
-import { ShoppingkartService } from '../shared/shoppingkart.service';
+import { ProductService } from '../sharedd/product.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { ShoppingkartService } from '../shared/shoppingkart.service';
   ],
   imports: [
     BrowserModule,
+    ShareddModule,
     FormsModule,
     ReactiveFormsModule,
     CustomFormsModule,

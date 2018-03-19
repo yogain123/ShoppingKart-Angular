@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../shared/product.service';
+import { ProductService } from '../../../sharedd/product.service';
 
 @Component({
   selector: 'product-filter',

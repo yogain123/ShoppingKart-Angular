@@ -1,5 +1,4 @@
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ShoppingkartService } from './shoppingkart.service';
+import { ShoppingkartService } from '../sharedd/shoppingkart.service';
 
 @NgModule({
   declarations: [
@@ -7,4 +6,4 @@ import { ShoppingkartService } from './shoppingkart.service';
   imports: [
   ],
   providers: [ProductService, ShoppingkartService]})
-export class AppModule { }
+export class SharedModule { }
